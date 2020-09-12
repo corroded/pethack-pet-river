@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Sends messages using Twilio SDK
 class MessageSender
   def self.send_message(message)
     new.send_message(message)
@@ -13,9 +16,9 @@ class MessageSender
 
   def send_message(message, to = ENV['DEV_NUMBER'])
     @client.messages.create(
-      from:  ENV['TWILIO_NUMBER'],
-      to:    to,
-      body:  message
+      from: ENV['TWILIO_NUMBER'],
+      to: to,
+      body: message
     )
   end
 end
