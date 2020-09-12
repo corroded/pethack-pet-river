@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  age: 1
+  vaccinated: false
+  registered: false
+  url: MyString
+  bounty: 1
+
+two:
+  name: MyString
+  age: 1
+  vaccinated: false
+  registered: false
+  url: MyString
+  bounty: 1
