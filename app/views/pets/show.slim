@@ -11,3 +11,9 @@ p
   ' If you are seeing this, I am probably lost and my owner has posted a
   => "$#{@pet.bounty} bounty"
   ' if you can reunite us by notifying them and staying with me until they arrive!
+
+p
+  => link_to 'Click here', '#', class: 'btn', data: {js_notify: true, js_pet_slug: @pet.url}
+  ' to send an alert to my human.
+
+= javascript_pack_tag 'getCurrentLocation'
