@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_12_085446) do
+ActiveRecord::Schema.define(version: 2020_09_13_005917) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "pets", force: :cascade do |t|
     t.string "name"
@@ -20,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_09_12_085446) do
     t.integer "human_id"
     t.string "url"
     t.integer "bounty"
+    t.text "description"
   end
 
   create_table "users", force: :cascade do |t|
