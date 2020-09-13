@@ -9,10 +9,13 @@ h1.main-heading
       label.form-label Name
       = f.text_field :name, class: 'input-field -text'
     li.form-field
-      label.form-label Bounty
+      label.form-label Reward
       = f.number_field :bounty, class: 'input-field -number'
+      span.hint
+        ' (Optional) This is the amount you want to give the person who reunites you with your pet.
     li.form-field
       label.form-label Blurb
       = f.text_area :description, class: 'input-field -textarea', rows: 8
+      span.hint A short description of what your pet is like so people who find them will know how to approach them.
     li.form-action
       = f.submit 'Save', class: 'btn'
