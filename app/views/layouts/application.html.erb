@@ -13,6 +13,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <h1 class="main-heading">
+      <figure class="logo-and-name">
+        <%= image_tag('petriver-logo.png', class: 'logo') %>
+        <span class="name"> Pet River</span>
+      </figure>
+    </h1>
+
+    <main class="main-container">
+      <%= yield %>
+    </main>
   </body>
 </html>
