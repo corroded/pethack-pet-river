@@ -10,10 +10,16 @@ figure.pet-avatar
 p.text-box
   = @pet.description
 
-p.text-box
-  ' If you are seeing this, I am probably lost and my owner has posted a
-  span.bounty=> "$#{@pet.bounty} bounty"
-  ' if you can reunite us by notifying them and staying with me until they arrive!
+- if @pet.bounty
+  p.text-box
+    ' If you are seeing this, I am probably lost and my owner has posted a
+    span.bounty=> "$#{@pet.bounty} bounty"
+    ' if you can reunite us by notifying them and staying with me until they arrive!
+- else
+  p.text-box
+    ' If you are seeing this, I am probably lost and my owner is very worried
+    ' 😿
+  p.text-box Please notify them of our location by clicking the button below.
 
 p.text-box
   => link_to 'Notify Human', '#', class: 'btn -cta', data: {js_notify: true, js_pet_slug: @pet.url}
